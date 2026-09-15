@@ -53,3 +53,25 @@ a.project-card-clickable:hover .project-live-badge {
   gap: 0.5rem;
   margin-bottom: 0.25rem;
 }
+
+/* Rose theme for Card 04 (Fall Detection) */
+a.project-card-rose:hover {
+  background-color: rgba(251, 113, 133, 0.025);
+  border-bottom-color: rgba(251, 113, 133, 0.3);
+}
+
+a.project-card-rose:hover .project-arrow {
+  color: #fb7185;
+}
+
+.project-live-badge-rose {
+  color: #fb7185;
+  background: rgba(251, 113, 133, 0.12);
+  border: 1px solid rgba(251, 113, 133, 0.4);
+}
+
+.project-card:hover .project-live-badge-rose,
+a.project-card-clickable:hover .project-live-badge-rose {
+  background: rgba(251, 113, 133, 0.24);
+  border-color: rgba(251, 113, 133, 0.7);
+}
