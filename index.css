@@ -97,3 +97,25 @@ a.project-card-clickable:hover .project-live-badge-emerald {
   background: rgba(52, 211, 153, 0.24);
   border-color: rgba(52, 211, 153, 0.7);
 }
+
+/* Violet theme for Card 02 (IMC League S4) */
+a.project-card-violet:hover {
+  background-color: rgba(167, 139, 250, 0.025);
+  border-bottom-color: rgba(167, 139, 250, 0.3);
+}
+
+a.project-card-violet:hover .project-arrow {
+  color: #a78bfa;
+}
+
+.project-live-badge-violet {
+  color: #a78bfa;
+  background: rgba(167, 139, 250, 0.12);
+  border: 1px solid rgba(167, 139, 250, 0.4);
+}
+
+.project-card:hover .project-live-badge-violet,
+a.project-card-clickable:hover .project-live-badge-violet {
+  background: rgba(167, 139, 250, 0.24);
+  border-color: rgba(167, 139, 250, 0.7);
+}

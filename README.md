@@ -27,7 +27,7 @@ This is the personal portfolio website of **Prajwal Ferrao**, an AI & ML enginee
 | # | Project | Domain & Stack | Live Demo |
 |---|---|---|---|
 | **01** | **GreenMeter Pro** | IoT · Mobile · Cloud<br>`Flutter` `Firebase` `Node.js` `ESP32` `OBD-II` | *In development* |
-| **02** | **IMC League S4** | Full-Stack Sports Platform<br>`Next.js` `React` `Supabase` `Vercel` | [Code & Repo](https://github.com/prajwalprajwalferrao-cloud/imc-league-s4) |
+| **02** | **IMC League S4** | Full-Stack Sports Platform<br>`Next.js` `React` `Supabase` `Vercel` | [🚀 Live App](https://imc-league-s4-lake.vercel.app/) |
 | **03** | **Face Recognition Attendance** | Computer Vision · Web App<br>`Python` `OpenCV` `Flask` `JavaScript` | [🚀 Live App](https://face-recognition-attendance-lemon.vercel.app/) |
 | **04** | **Fall Detection & Emergency Alert** | Safety System · Full Stack<br>`Next.js` `Express` `MongoDB` `Twilio` | [🚀 Live App](https://aegisfall-ai-detection.vercel.app/) |
 | **05** | **House Price Prediction** | Machine Learning · Analytics<br>`Python` `XGBoost` `Pandas` `Streamlit` | [🚀 Live App](https://housepriceprediction-sofkbghj7kkbmkyqtuq63p.streamlit.app/) |
