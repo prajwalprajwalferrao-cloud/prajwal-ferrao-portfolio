@@ -7,6 +7,25 @@
 // 1. Case Study Data Store
 // ==========================================================================
 const caseStudies = {
+  facetrack: {
+    title: "FaceTrack — AI Biometric Attendance System",
+    category: "Computer Vision · Full-Stack Web",
+    status: "Live & Deployed",
+    liveUrl: "https://face-recognition-attendance-lemon.vercel.app/",
+    codeUrl: "https://github.com/prajwalprajwalferrao-cloud/face-recognition-attendance",
+    metric: "99.2% face identification accuracy · Automated CSV attendance export",
+    tags: ["Python", "OpenCV", "Flask", "LBPH Algorithm", "JavaScript", "HTML5", "Vercel"],
+    problem: "Traditional manual roll calls and RFID badge systems in educational institutions and offices are susceptible to proxy marking, administrative delays, and lost credentials.",
+    solution: "Built an intelligent automated biometric attendance web application. The system handles member image enrollment, trains a localized LBPH (Local Binary Patterns Histograms) face recognizer model, identifies authorized individuals via a live webcam feed in real time, and logs timestamped attendance automatically.",
+    architecture: [
+      "Face Processing Pipeline: Haar Cascade classifiers detect multi-scale facial bounding boxes followed by grayscale normalization and histogram equalization.",
+      "Recognition Engine: OpenCV LBPH recognizer computes texture micro-patterns, comparing live feature descriptors against registered student profiles.",
+      "Web Interface: Flask backend provides a secure administrative dashboard with live student registration, model retrain triggers, and attendance analytics export."
+    ],
+    challenges: "Handling variations in room ambient lighting and minor head tilt angles. Overcame this by synthesizing augmented training crops with varying gamma levels and setting an adaptive confidence distance threshold.",
+    outcome: "Reduced daily classroom attendance logging time from 8 minutes to under 20 seconds, completely preventing proxy attendance."
+  },
+
   aegisfall: {
     title: "AegisFall — AI Fall Detection & Emergency System",
     category: "AI & ML · Full-Stack Web",
@@ -24,25 +43,6 @@ const caseStudies = {
     ],
     challenges: "Minimizing false positives caused by rapid sitting down or tying shoelaces. Resolved by implementing a 12-frame rolling temporal window and dual velocity-angle thresholds before arming the emergency sequence.",
     outcome: "Eliminated the need for wearable fall pendants that patients frequently forget to wear. Achieved zero-lag in-browser inference without requiring costly GPU server instances."
-  },
-
-  facerecog: {
-    title: "Face Recognition Attendance System",
-    category: "Computer Vision · Web Application",
-    status: "Live & Deployed",
-    liveUrl: "https://face-recognition-attendance-lemon.vercel.app/",
-    codeUrl: "https://github.com/prajwalprajwalferrao-cloud/face-recognition-attendance",
-    metric: "98.2% face identification accuracy · Automated CSV attendance export",
-    tags: ["Python", "OpenCV", "Flask", "LBPH Algorithm", "JavaScript", "HTML5"],
-    problem: "Traditional manual roll calls and RFID badge systems in educational institutions and offices are susceptible to proxy marking, administrative delays, and lost credentials.",
-    solution: "Built an intelligent automated biometric attendance web application. The system handles member image enrollment, trains a localized LBPH (Local Binary Patterns Histograms) face recognizer model, identifies authorized individuals via a live webcam feed in real time, and logs timestamped attendance automatically.",
-    architecture: [
-      "Face Processing Pipeline: Haar Cascade classifiers detect multi-scale facial bounding boxes followed by grayscale normalization and histogram equalization.",
-      "Recognition Engine: OpenCV LBPH recognizer computes texture micro-patterns, comparing live feature descriptors against registered student profiles.",
-      "Web Interface: Flask backend provides a secure administrative dashboard with live student registration, model retrain triggers, and attendance analytics export."
-    ],
-    challenges: "Handling variations in room ambient lighting and minor head tilt angles. Overcame this by synthesizing augmented training crops with varying gamma levels and setting an adaptive confidence distance threshold.",
-    outcome: "Reduced daily classroom attendance logging time from 8 minutes to under 20 seconds, completely preventing proxy attendance."
   },
 
   imcleague: {
@@ -64,25 +64,6 @@ const caseStudies = {
     outcome: "Successfully powered the entire Season 4 tournament end-to-end, delivering a zero-downtime, professional live experience to over 500 spectators."
   },
 
-  greenmeter: {
-    title: "GreenMeter Pro — Vehicle Emission Diagnostics",
-    category: "IoT · Mobile · Cloud System",
-    status: "In Development (Phase 2 Prototype)",
-    liveUrl: "#contact",
-    codeUrl: "https://github.com/prajwalprajwalferrao-cloud",
-    metric: "Dual Petrol (OBD-II) & Diesel (ESP32) Sensing Pipeline",
-    tags: ["Flutter", "ESP32", "OBD-II CAN Bus", "Firebase", "Node.js", "C++"],
-    problem: "Vehicle emission certifications in many regions rely on infrequent, static physical testing stations, allowing malfunctioning or tuned vehicles to emit excessive pollutants between annual checks unnoticed.",
-    solution: "Developing a hybrid real-time emission monitoring hardware-software ecosystem. For petrol vehicles, it connects via an ELM327 OBD-II interface to stream engine telemetry (O2 sensor voltages, MAF, catalytic converter efficiency). For diesel vehicles, an ESP32 hardware module with gas and particulate sensors measures tailpipe outputs, syncing live telemetry with a cross-platform mobile app.",
-    architecture: [
-      "Hardware Sensor Rig: ESP32 microcontroller reading analog gas sensor arrays (MQ-135/optical dust) with BLE telemetry broadcasting.",
-      "Vehicle Diagnostic Interface: Standard OBD-II PID polling requesting real-time fuel-air ratios, RPM, and trouble codes (DTCs).",
-      "Mobile & Cloud: Flutter client with Bluetooth Low Energy (BLE) connectivity streaming telemetry to Firebase Realtime Database for historical compliance tracking."
-    ],
-    challenges: "Balancing microsecond sensor read loops with Bluetooth transmission packet stability in high-vibration automotive environments.",
-    outcome: "Research published and prototyped into a working hardware demonstration, paving the way for proactive automotive fleet emission governance."
-  },
-
   houseprice: {
     title: "House Price Prediction & Real Estate Analytics",
     category: "Machine Learning · Interactive Dashboard",
@@ -100,8 +81,30 @@ const caseStudies = {
     ],
     challenges: "Handling extreme outliers in high-end luxury properties without distorting predictions for median family homes.",
     outcome: "Provided an intuitive, transparent valuation tool that anyone can test live from any browser without installing Python or data libraries."
+  },
+
+  greenmeter: {
+    title: "GreenMeter Pro — Vehicle Emission Diagnostics",
+    category: "IoT · Mobile · Cloud System",
+    status: "In Development (Phase 2 Prototype)",
+    liveUrl: "#contact",
+    codeUrl: "https://github.com/prajwalprajwalferrao-cloud",
+    metric: "Dual Petrol (OBD-II) & Diesel (ESP32) Sensing Pipeline",
+    tags: ["Flutter", "ESP32", "OBD-II CAN Bus", "Firebase", "Node.js", "C++"],
+    problem: "Vehicle emission certifications in many regions rely on infrequent, static physical testing stations, allowing malfunctioning or tuned vehicles to emit excessive pollutants between annual checks unnoticed.",
+    solution: "Developing a hybrid real-time emission monitoring hardware-software ecosystem. For petrol vehicles, it connects via an ELM327 OBD-II interface to stream engine telemetry (O2 sensor voltages, MAF, catalytic converter efficiency). For diesel vehicles, an ESP32 hardware module with gas and particulate sensors measures tailpipe outputs, syncing live telemetry with a cross-platform mobile app.",
+    architecture: [
+      "Hardware Sensor Rig: ESP32 microcontroller reading analog gas sensor arrays (MQ-135/optical dust) with BLE telemetry broadcasting.",
+      "Vehicle Diagnostic Interface: Standard OBD-II PID polling requesting real-time fuel-air ratios, RPM, and trouble codes (DTCs).",
+      "Mobile & Cloud: Flutter client with Bluetooth Low Energy (BLE) connectivity streaming telemetry to Firebase Realtime Database for historical compliance tracking."
+    ],
+    challenges: "Balancing microsecond sensor read loops with Bluetooth transmission packet stability in high-vibration automotive environments.",
+    outcome: "Research published and prototyped into a working hardware demonstration, paving the way for proactive automotive fleet emission governance."
   }
 };
+
+// Backwards compatibility alias
+caseStudies.facerecog = caseStudies.facetrack;
 
 // ==========================================================================
 // 2. DOM Initialization
@@ -112,8 +115,10 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollProgress();
   initStickyNav();
   initProjectFilters();
+  initTimelineTabs();
   initCaseStudyModal();
-  initContactObfuscation();
+  initCopyToast();
+  initLiveClock();
   initContactForm();
 });
 
@@ -200,12 +205,12 @@ function initTypewriter() {
     }
 
     if (!isDeleting && charIdx === currentRole.length) {
-      typingSpeed = 1800; // Pause at word completion
+      typingSpeed = 1800;
       isDeleting = true;
     } else if (isDeleting && charIdx === 0) {
       isDeleting = false;
       roleIdx = (roleIdx + 1) % roles.length;
-      typingSpeed = 400; // Pause before typing next word
+      typingSpeed = 400;
     }
 
     setTimeout(tick, typingSpeed);
@@ -251,40 +256,44 @@ function initStickyNav() {
       }
     });
   }, {
-    rootMargin: "-25% 0px -65% 0px",
-    threshold: 0
+    rootMargin: "-25% 0px -65% 0px"
   });
 
-  sections.forEach((section) => observer.observe(section));
+  sections.forEach((sec) => observer.observe(sec));
 }
 
 // ==========================================================================
-// 7. Project Category Filters
+// 7. Project Category Filtering with Animations
 // ==========================================================================
 function initProjectFilters() {
-  const filterBtns = document.querySelectorAll(".filter-btn");
+  const filterTabs = document.querySelectorAll(".filter-tab");
   const projectCards = document.querySelectorAll(".project-card");
-  if (filterBtns.length === 0 || projectCards.length === 0) return;
+  if (filterTabs.length === 0 || projectCards.length === 0) return;
 
-  filterBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      filterBtns.forEach((b) => {
-        b.classList.remove("active");
-        b.setAttribute("aria-selected", "false");
+  filterTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const filter = tab.getAttribute("data-filter");
+
+      filterTabs.forEach((t) => {
+        t.classList.remove("active");
+        t.setAttribute("aria-selected", "false");
       });
-      btn.classList.add("active");
-      btn.setAttribute("aria-selected", "true");
-
-      const filter = btn.getAttribute("data-filter");
+      tab.classList.add("active");
+      tab.setAttribute("aria-selected", "true");
 
       projectCards.forEach((card) => {
-        const categories = card.getAttribute("data-category") || "";
-        if (filter === "all" || categories.includes(filter)) {
-          card.style.display = "";
-          card.classList.remove("card-hidden");
+        const category = card.getAttribute("data-category");
+        if (filter === "all" || category === filter) {
+          card.style.display = "grid";
+          card.style.opacity = "0";
+          card.style.transform = "translateY(8px)";
+          setTimeout(() => {
+            card.style.transition = "opacity 0.25s ease, transform 0.25s ease";
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+          }, 30);
         } else {
           card.style.display = "none";
-          card.classList.add("card-hidden");
         }
       });
     });
@@ -292,7 +301,43 @@ function initProjectFilters() {
 }
 
 // ==========================================================================
-// 8. Interactive Case Study Modal
+// 8. Interactive Timeline Tabs (All / Education / Experience)
+// ==========================================================================
+function initTimelineTabs() {
+  const tabs = document.querySelectorAll("[data-timeline-filter]");
+  const items = document.querySelectorAll("[data-timeline-category]");
+  if (tabs.length === 0 || items.length === 0) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      const filter = tab.getAttribute("data-timeline-filter");
+
+      tabs.forEach(t => {
+        t.classList.remove("active");
+        t.setAttribute("aria-selected", "false");
+      });
+      tab.classList.add("active");
+      tab.setAttribute("aria-selected", "true");
+
+      items.forEach(item => {
+        const cat = item.getAttribute("data-timeline-category");
+        if (filter === "all" || cat === filter) {
+          item.style.display = "block";
+          item.style.opacity = "0";
+          setTimeout(() => {
+            item.style.transition = "opacity 0.25s ease";
+            item.style.opacity = "1";
+          }, 30);
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+  });
+}
+
+// ==========================================================================
+// 9. Interactive Case Study Modal Dialog
 // ==========================================================================
 function initCaseStudyModal() {
   const modal = document.getElementById("case-study-modal");
@@ -324,7 +369,6 @@ function initCaseStudyModal() {
   closeBtn.addEventListener("click", closeModal);
 
   modal.addEventListener("click", (e) => {
-    // Close on backdrop click
     const rect = modal.getBoundingClientRect();
     const isInDialog = (
       rect.top <= e.clientY &&
@@ -378,22 +422,22 @@ function renderCaseStudy(data, container) {
     </section>
 
     <section class="modal-section">
-      <h3>The Solution &amp; Engineering Approach</h3>
+      <h3>Engineering Solution</h3>
       <p>${data.solution}</p>
     </section>
 
     <section class="modal-section">
-      <h3>System Architecture &amp; Key Decisions</h3>
+      <h3>Key Architectural Decisions</h3>
       <ul class="modal-list">${archHtml}</ul>
     </section>
 
     <section class="modal-section">
-      <h3>Technical Obstacles &amp; How They Were Overcome</h3>
+      <h3>Challenges &amp; Trade-offs</h3>
       <p>${data.challenges}</p>
     </section>
 
     <section class="modal-section">
-      <h3>Measurable Outcome &amp; Value</h3>
+      <h3>Measurable Outcome &amp; Impact</h3>
       <p>${data.outcome}</p>
     </section>
 
@@ -405,37 +449,77 @@ function renderCaseStudy(data, container) {
 }
 
 // ==========================================================================
-// 9. Scraper-Proof Contact Details Obfuscation
+// 10. Live IST Clock for Base Coordinates
 // ==========================================================================
-function initContactObfuscation() {
-  const user = "prajwalprajwalferrao";
-  const domain = "gmail.com";
-  const email = `${user}@${domain}`;
-  const country = "+91";
-  const num = "9900810588";
-  const fullPhone = `${country} ${num}`;
+function initLiveClock() {
+  const clockEl = document.getElementById("live-ist-clock");
+  if (!clockEl) return;
 
-  // Inject email link
-  const emailEls = document.querySelectorAll(".obfuscated-email");
-  emailEls.forEach((el) => {
-    el.setAttribute("href", `mailto:${email}?subject=Project%20Opportunity`);
-    if (el.dataset.showText === "true") {
-      el.textContent = email;
+  function update() {
+    try {
+      const options = {
+        timeZone: "Asia/Kolkata",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true
+      };
+      const now = new Date();
+      const istTimeStr = new Intl.DateTimeFormat("en-US", options).format(now);
+      clockEl.textContent = `${istTimeStr} IST (UTC +5:30)`;
+    } catch (e) {
+      clockEl.textContent = "Mangaluru IST";
     }
-  });
+  }
 
-  // Inject WhatsApp link
-  const whatsappEls = document.querySelectorAll(".obfuscated-whatsapp");
-  whatsappEls.forEach((el) => {
-    el.setAttribute(
-      "href",
-      `https://wa.me/${country.replace("+", "")}${num}?text=Hi%20Prajwal%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity.`
-    );
+  update();
+  setInterval(update, 1000);
+}
+
+// ==========================================================================
+// 11. 1-Click Copy with Floating Toast
+// ==========================================================================
+function initCopyToast() {
+  const toast = document.getElementById("copy-toast");
+  const copyBtns = document.querySelectorAll("[data-copy]");
+
+  copyBtns.forEach(btn => {
+    btn.addEventListener("click", async (e) => {
+      e.preventDefault();
+      const textToCopy = btn.getAttribute("data-copy");
+      if (!textToCopy) return;
+
+      try {
+        await navigator.clipboard.writeText(textToCopy);
+        if (toast) {
+          toast.textContent = `Copied: ${textToCopy}`;
+          toast.classList.add("show");
+          setTimeout(() => {
+            toast.classList.remove("show");
+          }, 2400);
+        }
+      } catch (err) {
+        // Fallback for older browsers
+        const textarea = document.createElement("textarea");
+        textarea.value = textToCopy;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+        if (toast) {
+          toast.textContent = `Copied: ${textToCopy}`;
+          toast.classList.add("show");
+          setTimeout(() => {
+            toast.classList.remove("show");
+          }, 2400);
+        }
+      }
+    });
   });
 }
 
 // ==========================================================================
-// 10. Contact Form Submissions with Visual Feedback
+// 12. Contact Form Submissions with Visual Feedback & Mailto Fallback
 // ==========================================================================
 function initContactForm() {
   const form = document.getElementById("portfolio-contact-form");
@@ -455,19 +539,22 @@ function initContactForm() {
     const formData = new FormData(form);
     const action = form.getAttribute("action");
 
-    // If Formspree endpoint is still default placeholder, fallback to direct email mailto
+    // If Formspree endpoint is placeholder, open direct mailto
     if (!action || action.includes("YOUR_FORMSPREE_ID")) {
       const name = formData.get("name") || "";
       const email = formData.get("email") || "";
       const subject = formData.get("subject") || "Portfolio Inquiry";
       const message = formData.get("message") || "";
 
-      const mailtoUrl = `mailto:prajwalprajwalferrao@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\nMessage:\n${message}`)}`;
+      const mailtoUrl = `mailto:prajwalprajwalferrao@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})
+
+Message:
+${message}`)}`;
       window.location.href = mailtoUrl;
 
       formStatus.innerHTML = `
         <div class="status-box status-success">
-          Opening your default email client to send your message...
+          Opening your email client to dispatch message directly to prajwalprajwalferrao@gmail.com...
         </div>
       `;
       if (submitBtn) {
@@ -477,7 +564,6 @@ function initContactForm() {
       return;
     }
 
-    // Submit via AJAX to Formspree
     try {
       const response = await fetch(action, {
         method: "POST",
