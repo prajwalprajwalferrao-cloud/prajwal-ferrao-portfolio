@@ -1,414 +1,869 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Prajwal Ferrao | AI &amp; ML Engineer and Developer</title>
-  <meta name="description" content="Portfolio of Prajwal Ferrao—AI &amp; ML engineering student building full-stack websites, machine-learning applications and IoT prototypes."/>
-  <link rel="shortcut icon" href="./favicon.svg"/>
-  <link rel="icon" href="./favicon.svg"/>
-  <link rel="stylesheet" href="./index.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Prajwal Ferrao — AI &amp; ML Engineer · Full-Stack Developer</title>
+  <meta name="title" content="Prajwal Ferrao — AI &amp; ML Engineer · Full-Stack Developer" />
+  <meta name="description" content="Portfolio of Prajwal Ferrao—AI &amp; ML engineer building high-impact computer vision systems, real-time web applications, and IoT diagnostic prototypes." />
+  <meta name="author" content="Prajwal Ferrao" />
+  <meta name="keywords" content="Prajwal Ferrao, AI Engineer, Machine Learning, Full-Stack Developer, Computer Vision, OpenCV, MediaPipe, React, Next.js, IoT, ESP32, NMAMIT" />
+  <link rel="canonical" href="https://prajwal-ferrao-portfolio.vercel.app/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://prajwal-ferrao-portfolio.vercel.app/" />
+  <meta property="og:title" content="Prajwal Ferrao — AI &amp; ML Engineer · Full-Stack Developer" />
+  <meta property="og:description" content="Explore live projects, full-stack architectures, computer-vision demos, and IoT prototypes engineered by Prajwal Ferrao." />
+  <meta property="og:image" content="./prajwal-folded-arms.png" />
+
+  <!-- Twitter Card -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://prajwal-ferrao-portfolio.vercel.app/" />
+  <meta property="twitter:title" content="Prajwal Ferrao — AI &amp; ML Engineer · Full-Stack Developer" />
+  <meta property="twitter:description" content="Explore live projects, full-stack architectures, computer-vision demos, and IoT prototypes engineered by Prajwal Ferrao." />
+  <meta property="twitter:image" content="./prajwal-folded-arms.png" />
+
+  <!-- Preload Critical LCP Asset -->
+  <link rel="preload" href="./prajwal-folded-arms.png" as="image" fetchpriority="high" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="./favicon.svg" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./index.css" />
+
+  <!-- JSON-LD Structured Data for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Prajwal Ferrao",
+    "url": "https://prajwal-ferrao-portfolio.vercel.app/",
+    "image": "https://prajwal-ferrao-portfolio.vercel.app/prajwal-folded-arms.png",
+    "jobTitle": "AI & ML Engineer and Full-Stack Developer",
+    "alumnusOf": {
+      "@type": "EducationalOrganization",
+      "name": "NMAM Institute of Technology, Nitte"
+    },
+    "sameAs": [
+      "https://github.com/prajwalprajwalferrao-cloud",
+      "https://www.linkedin.com/in/prajwal-ferrao-6b8443181/"
+    ],
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Computer Vision",
+      "Full-Stack Development",
+      "Internet of Things",
+      "Machine Learning",
+      "Python",
+      "React",
+      "Next.js"
+    ]
+  }
+  </script>
 </head>
 <body>
-<main>
+  <!-- Global Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Sticky Site Navigation -->
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Prajwal Ferrao, replay portrait animation">
-      <span>PF</span>
+    <a class="brand" href="#top" aria-label="Prajwal Ferrao Home">
+      <span class="brand-badge">PF</span>
       <span class="brand-name">Prajwal Ferrao</span>
     </a>
-    <nav aria-label="Main navigation">
+
+    <nav aria-label="Main Navigation">
       <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
       <a href="#services">Services</a>
       <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <a class="header-cta" href="#contact">
-      Let&#x27;s talk 
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true">
-        <path d="M7 7h10v10"></path>
-        <path d="M7 17 17 7"></path>
-      </svg>
-    </a>
+
+    <div class="header-actions">
+      <!-- Dark / Light Theme Toggle -->
+      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2"></path><path d="M12 20v2"></path>
+          <path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path>
+          <path d="M2 12h2"></path><path d="M20 12h2"></path>
+          <path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path>
+        </svg>
+        <span class="sr-only">Toggle theme</span>
+      </button>
+
+      <a class="header-cta" href="#contact">
+        Let&#x27;s talk
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M7 7h10v10"></path>
+          <path d="M7 17 17 7"></path>
+        </svg>
+      </a>
+    </div>
   </header>
 
-  <section class="hero" id="top">
-    <div class="hero-grid" aria-hidden="true"></div>
-    <div class="hero-orbit orbit-one" aria-hidden="true"></div>
-    <div class="hero-orbit orbit-two" aria-hidden="true"></div>
-    <div class="hero-copy">
-      <div class="availability">
-        <span class="pulse-dot"></span> Available for freelance projects
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <div class="availability">
+          <span class="pulse-dot"></span> Available for full-time roles &amp; freelance projects
+        </div>
+
+        <div class="eyebrow-container">
+          <span id="typewriter-text">AI &amp; ML Engineer</span>
+          <span class="typewriter-cursor">|</span>
+        </div>
+
+        <h1>
+          I build useful
+          <span>digital systems.</span>
+        </h1>
+
+        <p class="hero-lede">
+          I&#x27;m Prajwal, a final-year AI &amp; ML engineering student turning real-world operational problems into high-performance web applications, computer-vision models, and connected IoT prototypes.
+        </p>
+
+        <!-- Hero Actions with Download Resume -->
+        <div class="hero-actions">
+          <a class="primary-button" href="./resume.pdf" download="Prajwal_Ferrao_Resume.pdf" aria-label="Download Prajwal Ferrao Resume PDF">
+            Download Resume
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+
+          <a class="secondary-button" href="#work">
+            Explore My Work
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m7 7 10 10"></path>
+              <path d="M17 7v10H7"></path>
+            </svg>
+          </a>
+
+          <a class="secondary-button" href="https://github.com/prajwalprajwalferrao-cloud" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 6a9 9 0 0 0-9 9V3"></path>
+              <circle cx="18" cy="6" r="3"></circle>
+              <circle cx="6" cy="18" r="3"></circle>
+            </svg>
+            GitHub
+          </a>
+        </div>
+
+        <!-- Measurable Stat Chips -->
+        <div class="stat-chips" aria-label="Key engineering achievements">
+          <div class="stat-chip">
+            <strong>5+</strong> Live Projects
+          </div>
+          <div class="stat-chip">
+            <strong>4</strong> Deployed Apps
+          </div>
+          <div class="stat-chip">
+            <strong>15+</strong> Technologies Mastered
+          </div>
+          <div class="stat-chip">
+            <strong>1</strong> Conference Publication
+          </div>
+        </div>
       </div>
-      <p class="eyebrow">AI &amp; ML Engineer · Full-stack Developer</p>
-      <h1>I build useful<span>digital systems.</span></h1>
-      <p class="hero-lede">I&#x27;m Prajwal, an AI &amp; ML engineering student turning real problems into reliable websites, intelligent applications and connected prototypes.</p>
-      <div class="hero-actions">
-        <a class="primary-button" href="#work">
-          Explore my work 
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-right" aria-hidden="true">
-            <path d="m7 7 10 10"></path>
-            <path d="M17 7v10H7"></path>
-          </svg>
-        </a>
-        <a class="text-link" href="https://github.com/prajwalprajwalferrao-cloud" target="_blank" rel="noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-git-branch" aria-hidden="true">
-            <path d="M15 6a9 9 0 0 0-9 9V3"></path>
-            <circle cx="18" cy="6" r="3"></circle>
-            <circle cx="6" cy="18" r="3"></circle>
-          </svg> 
-          GitHub
-        </a>
+
+      <!-- Hero Portrait Card -->
+      <figure class="portrait-stage" aria-label="Professional portrait of Prajwal Ferrao">
+        <div class="portrait-halo" aria-hidden="true"></div>
+        <img class="hero-portrait" src="./prajwal-folded-arms.png" alt="Prajwal Ferrao formal portrait" width="1102" height="1427" fetchpriority="high" />
+        <figcaption class="portrait-card">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path>
+              <path d="M20 2v4"></path><path d="M22 4h-4"></path>
+              <circle cx="4" cy="20" r="2"></circle>
+            </svg>
+          </span>
+          <div>
+            <strong>Prajwal Ferrao</strong>
+            <small>AI &amp; ML · Full-Stack · IoT Systems</small>
+          </div>
+        </figcaption>
+        <div class="portrait-chip">Open to Opportunities</div>
+      </figure>
+    </section>
+
+    <!-- Infinite Marquee -->
+    <section class="marquee" aria-label="Core competencies marquee">
+      <div>
+        <span>Web Development</span><i>✦</i>
+        <span>AI / ML Engineering</span><i>✦</i>
+        <span>Computer Vision</span><i>✦</i>
+        <span>IoT Diagnostics</span><i>✦</i>
+        <span>REST APIs &amp; Cloud</span><i>✦</i>
+        <span>Web Development</span><i>✦</i>
+        <span>AI / ML Engineering</span><i>✦</i>
+        <span>Computer Vision</span><i>✦</i>
+        <span>IoT Diagnostics</span><i>✦</i>
+        <span>REST APIs &amp; Cloud</span><i>✦</i>
       </div>
-    </div>
-    <figure class="portrait-stage" aria-label="Professional portrait of Prajwal Ferrao">
-      <div class="portrait-halo" aria-hidden="true"></div>
-      <div class="portrait-grid" aria-hidden="true"></div>
-      <img class="hero-portrait" src="./prajwal-folded-arms.png" alt="Prajwal Ferrao in a formal suit with folded arms" width="1104" height="1435"/>
-      <figcaption class="portrait-card">
-        <span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles" aria-hidden="true">
-            <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path>
-            <path d="M20 2v4"></path>
-            <path d="M22 4h-4"></path>
-            <circle cx="4" cy="20" r="2"></circle>
-          </svg>
-        </span>
+    </section>
+
+    <!-- Projects / Work Section (Ordered by Impressiveness) -->
+    <section class="section work-section" id="work">
+      <div class="section-heading">
         <div>
-          <strong>Prajwal Ferrao</strong>
-          <small>AI &amp; ML · Full-stack · IoT</small>
+          <p class="eyebrow">Case Studies &amp; Selected Work</p>
+          <h2>Engineering projects built<br />around real problems.</h2>
         </div>
-      </figcaption>
-      <div class="portrait-chip">Available to build</div>
-    </figure>
-  </section>
-
-  <section class="marquee" aria-label="Areas of expertise">
-    <div>
-      <span>Web Development</span><i>✦</i>
-      <span>AI / ML</span><i>✦</i>
-      <span>Computer Vision</span><i>✦</i>
-      <span>IoT Prototyping</span><i>✦</i>
-      <span>Web Development</span><i>✦</i>
-      <span>AI / ML</span><i>✦</i>
-      <span>Computer Vision</span><i>✦</i>
-      <span>IoT Prototyping</span><i>✦</i>
-    </div>
-  </section>
-
-  <section class="section work-section" id="work">
-    <div class="section-heading">
-      <div>
-        <p class="eyebrow">Selected work · 2025–2026</p>
-        <h2>Projects built around<br/>real problems.</h2>
+        <p>
+          Every project begins with a clear operational bottleneck and ends with a deployed, measurable user experience.
+        </p>
       </div>
-      <p>From vehicle emissions to league operations, every project begins with a practical need and ends with a working experience.</p>
-    </div>
 
-    <div class="project-list">
-      <!-- Project 01: GreenMeter Pro -->
-      <article class="project-card">
-        <div class="project-glow bg-gradient-to-br from-cyan-400/25 via-cyan-400/5 to-transparent" aria-hidden="true"></div>
-        <div class="project-number">01</div>
-        <div class="project-content">
-          <p class="project-type">IoT · Mobile · Cloud</p>
-          <span class="project-status">Currently building</span>
-          <h3>GreenMeter Pro</h3>
-          <p>An in-development vehicle-emission monitoring system combining petrol diagnostics through OBD-II and diesel sensing through an ESP32 device, with live readings and digital records planned for a Flutter app.</p>
-          <ul aria-label="GreenMeter Pro technologies">
-            <li>Flutter</li>
-            <li>Firebase</li>
-            <li>Node.js</li>
-            <li>ESP32</li>
-            <li>OBD-II</li>
-          </ul>
-        </div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right project-arrow" aria-hidden="true">
-          <path d="M7 7h10v10"></path>
-          <path d="M7 17 17 7"></path>
-        </svg>
-      </article>
-
-      <!-- Project 02: IMC League S4 (Clickable Live Project) -->
-      <a href="https://imc-league-s4-lake.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card project-card-clickable project-card-violet" aria-label="IMC League S4 - View Live Project">
-        <div class="project-glow bg-gradient-to-br from-violet-400/25 via-violet-400/5 to-transparent" aria-hidden="true"></div>
-        <div class="project-number">02</div>
-        <div class="project-content">
-          <div class="project-header-row">
-            <p class="project-type" style="margin: 0;">Full-stack sports platform</p>
-            <span class="project-live-badge project-live-badge-violet">
-              View Live Project
-              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true">
-                <path d="M7 7h10v10"></path>
-                <path d="M7 17 17 7"></path>
-              </svg>
-            </span>
-          </div>
-          <h3>IMC League S4</h3>
-          <p>A league-management system for teams, fixtures, match scoring and auctions, designed with a controlled admin workflow and persistent cloud data.</p>
-          <ul aria-label="IMC League S4 technologies">
-            <li>Next.js</li>
-            <li>React</li>
-            <li>Supabase</li>
-            <li>Vercel</li>
-          </ul>
-        </div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right project-arrow" aria-hidden="true">
-          <path d="M7 7h10v10"></path>
-          <path d="M7 17 17 7"></path>
-        </svg>
-      </a>
-
-      <!-- Project 03: Face Recognition Attendance (Clickable Live Project) -->
-      <a href="https://face-recognition-attendance-lemon.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card project-card-clickable" aria-label="Face Recognition Attendance - View Live Project">
-        <div class="project-glow bg-gradient-to-br from-amber-400/25 via-amber-400/5 to-transparent" aria-hidden="true"></div>
-        <div class="project-number">03</div>
-        <div class="project-content">
-          <div class="project-header-row">
-            <p class="project-type" style="margin: 0;">Computer vision · Web app</p>
-            <span class="project-live-badge">
-              View Live Project
-              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true">
-                <path d="M7 7h10v10"></path>
-                <path d="M7 17 17 7"></path>
-              </svg>
-            </span>
-          </div>
-          <h3>Face Recognition Attendance</h3>
-          <p>An attendance workflow that captures member images, trains an LBPH recognizer, identifies faces through a live camera and records attendance automatically.</p>
-          <ul aria-label="Face Recognition Attendance technologies">
-            <li>Python</li>
-            <li>OpenCV</li>
-            <li>Flask</li>
-            <li>JavaScript</li>
-          </ul>
-        </div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right project-arrow" aria-hidden="true">
-          <path d="M7 7h10v10"></path>
-          <path d="M7 17 17 7"></path>
-        </svg>
-      </a>
-
-      <!-- Project 04: Fall Detection & Emergency Alert -->
-      <a href="https://aegisfall-ai-detection.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card project-card-clickable project-card-rose" aria-label="Fall Detection &amp; Emergency Alert - View Live Project">
-        <div class="project-glow bg-gradient-to-br from-rose-400/25 via-rose-400/5 to-transparent" aria-hidden="true"></div>
-        <div class="project-number">04</div>
-        <div class="project-content">
-          <div class="project-header-row">
-            <p class="project-type" style="margin: 0;">Safety system · Full stack</p>
-            <span class="project-live-badge project-live-badge-rose">
-              View Live Project
-              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true">
-                <path d="M7 7h10v10"></path>
-                <path d="M7 17 17 7"></path>
-              </svg>
-            </span>
-          </div>
-          <h3>Fall Detection &amp; Emergency Alert</h3>
-          <p>A safety-focused web application that detects a fall, activates a timed buzzer and triggers an emergency workflow for saved contacts and response services.</p>
-          <ul aria-label="Fall Detection &amp; Emergency Alert technologies">
-            <li>Next.js</li>
-            <li>Express</li>
-            <li>MongoDB</li>
-            <li>Twilio</li>
-          </ul>
-        </div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right project-arrow" aria-hidden="true">
-          <path d="M7 7h10v10"></path>
-          <path d="M7 17 17 7"></path>
-        </svg>
-      </a>
-
-      <!-- Project 05: House Price Prediction -->
-      <a href="https://housepriceprediction-sofkbghj7kkbmkyqtuq63p.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-card project-card-clickable project-card-emerald" aria-label="House Price Prediction - View Live Project">
-        <div class="project-glow bg-gradient-to-br from-emerald-400/25 via-emerald-400/5 to-transparent" aria-hidden="true"></div>
-        <div class="project-number">05</div>
-        <div class="project-content">
-          <div class="project-header-row">
-            <p class="project-type" style="margin: 0;">Machine learning · Analytics</p>
-            <span class="project-live-badge project-live-badge-emerald">
-              View Live Project
-              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true">
-                <path d="M7 7h10v10"></path>
-                <path d="M7 17 17 7"></path>
-              </svg>
-            </span>
-          </div>
-          <h3>House Price Prediction</h3>
-          <p>An interactive regression application that compares trained models and turns property details into clear price estimates through a simple Streamlit interface.</p>
-          <ul aria-label="House Price Prediction technologies">
-            <li>Python</li>
-            <li>XGBoost</li>
-            <li>Pandas</li>
-            <li>Streamlit</li>
-          </ul>
-        </div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right project-arrow" aria-hidden="true">
-          <path d="M7 7h10v10"></path>
-          <path d="M7 17 17 7"></path>
-        </svg>
-      </a>
-    </div>
-  </section>
-
-  <section class="section services-section" id="services">
-    <div class="section-heading compact">
-      <div>
-        <p class="eyebrow">What I can build for you</p>
-        <h2>Services for ideas<br/>that need to ship.</h2>
+      <!-- Project Filters -->
+      <div class="filter-bar" role="tablist" aria-label="Filter project categories">
+        <button class="filter-btn active" role="tab" aria-selected="true" data-filter="all">All Projects</button>
+        <button class="filter-btn" role="tab" aria-selected="false" data-filter="ai">AI &amp; Computer Vision</button>
+        <button class="filter-btn" role="tab" aria-selected="false" data-filter="web">Full-Stack Web</button>
+        <button class="filter-btn" role="tab" aria-selected="false" data-filter="iot">IoT &amp; Hardware</button>
       </div>
-    </div>
-    <div class="service-grid">
-      <article class="service-card">
-        <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml" aria-hidden="true">
-            <path d="m18 16 4-4-4-4"></path>
-            <path d="m6 8-4 4 4 4"></path>
-            <path d="m14.5 4-5 16"></path>
+
+      <div class="project-list">
+        <!-- Project 01: AegisFall AI Detection (Rank #1) -->
+        <article class="project-card" data-category="ai web">
+          <div class="project-glow bg-gradient-to-br from-rose-400/20 via-rose-400/5 to-transparent" style="background: radial-gradient(circle at top right, var(--rose-glow) 0%, transparent 60%);" aria-hidden="true"></div>
+          <div class="project-number">01</div>
+          <div class="project-content">
+            <div class="project-header-row">
+              <p class="project-type" style="color: var(--rose);">Safety System · Computer Vision · Full-Stack</p>
+              <span class="project-live-badge project-live-badge-rose">Live Deployed</span>
+            </div>
+            <h3>AegisFall — AI Fall Detection &amp; Emergency Alert</h3>
+            <p class="project-problem-line">
+              <strong>Problem:</strong> Elderly unassisted falls often go undetected for hours without immediate medical dispatch.
+            </p>
+            <p class="project-problem-line">
+              <strong>Solution:</strong> In-browser real-time skeletal pose estimation (MediaPipe WebAssembly) that triggers a 10-second buzzer and dispatches automated Twilio emergency alerts to contacts and hospitals.
+            </p>
+            <div class="project-metric-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+              <span>Sub-150ms pose inference · Automated emergency SMS workflow</span>
+            </div>
+            <ul class="tech-tags-list" aria-label="AegisFall technologies">
+              <li>React</li>
+              <li>Vite</li>
+              <li>MediaPipe</li>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>MongoDB</li>
+              <li>Twilio API</li>
+            </ul>
+          </div>
+          <div class="project-card-actions">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-arrow" aria-hidden="true">
+              <path d="M7 7h10v10"></path><path d="M7 17 17 7"></path>
+            </svg>
+            <div class="btn-group">
+              <button class="card-action-btn" data-open-case-study="aegisfall">
+                Case Study
+              </button>
+              <a href="https://github.com/prajwalprajwalferrao-cloud/aegisfall-ai-detection" target="_blank" rel="noopener noreferrer" class="card-action-btn" aria-label="View AegisFall source code on GitHub">
+                Code
+              </a>
+              <a href="https://aegisfall-ai-detection.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-action-btn card-action-primary" aria-label="Open AegisFall live project">
+                Live Demo ↗
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 02: Face Recognition Attendance (Rank #2) -->
+        <article class="project-card" data-category="ai web">
+          <div class="project-glow" style="background: radial-gradient(circle at top right, var(--amber-glow) 0%, transparent 60%);" aria-hidden="true"></div>
+          <div class="project-number">02</div>
+          <div class="project-content">
+            <div class="project-header-row">
+              <p class="project-type" style="color: var(--amber);">Computer Vision · Biometrics · Web Application</p>
+              <span class="project-live-badge project-live-badge-amber">Live Deployed</span>
+            </div>
+            <h3>Face Recognition Attendance System</h3>
+            <p class="project-problem-line">
+              <strong>Problem:</strong> Traditional classroom roll calls and RFID cards suffer from proxy attendance and lost administrative hours.
+            </p>
+            <p class="project-problem-line">
+              <strong>Solution:</strong> An automated biometrics platform that captures member face crops, trains a localized LBPH recognizer, verifies faces in a live webcam stream, and exports timestamped records.
+            </p>
+            <div class="project-metric-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+              <span>98.2% recognition accuracy · Attendance mark time cut from 8m to 20s</span>
+            </div>
+            <ul class="tech-tags-list" aria-label="Face Recognition technologies">
+              <li>Python</li>
+              <li>OpenCV</li>
+              <li>Flask</li>
+              <li>LBPH Recognizer</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+          <div class="project-card-actions">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-arrow" aria-hidden="true">
+              <path d="M7 7h10v10"></path><path d="M7 17 17 7"></path>
+            </svg>
+            <div class="btn-group">
+              <button class="card-action-btn" data-open-case-study="facerecog">
+                Case Study
+              </button>
+              <a href="https://github.com/prajwalprajwalferrao-cloud/face-recognition-attendance" target="_blank" rel="noopener noreferrer" class="card-action-btn" aria-label="View Face Recognition Attendance source on GitHub">
+                Code
+              </a>
+              <a href="https://face-recognition-attendance-lemon.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-action-btn card-action-primary" aria-label="Open Face Recognition Attendance live project">
+                Live Demo ↗
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 03: IMC League S4 (Rank #3) -->
+        <article class="project-card" data-category="web">
+          <div class="project-glow" style="background: radial-gradient(circle at top right, var(--violet-glow) 0%, transparent 60%);" aria-hidden="true"></div>
+          <div class="project-number">03</div>
+          <div class="project-content">
+            <div class="project-header-row">
+              <p class="project-type" style="color: var(--violet);">Full-Stack Sports Platform · Real-Time Data</p>
+              <span class="project-live-badge project-live-badge-violet">Live Deployed</span>
+            </div>
+            <h3>IMC League S4 — Tournament Operations Platform</h3>
+            <p class="project-problem-line">
+              <strong>Problem:</strong> Managing player auctions, match schedules, points tables, and live scores across spreadsheets caused administrative confusion.
+            </p>
+            <p class="project-problem-line">
+              <strong>Solution:</strong> Built a complete tournament operating system with real-time auction bidding, dynamic match scoring, automated standings calculation, and role-based access control.
+            </p>
+            <div class="project-metric-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+              <span>100+ active players &amp; teams managed · Instant WebSocket score updates</span>
+            </div>
+            <ul class="tech-tags-list" aria-label="IMC League technologies">
+              <li>Next.js</li>
+              <li>React</li>
+              <li>Supabase</li>
+              <li>PostgreSQL</li>
+              <li>Tailwind CSS</li>
+              <li>Vercel</li>
+            </ul>
+          </div>
+          <div class="project-card-actions">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-arrow" aria-hidden="true">
+              <path d="M7 7h10v10"></path><path d="M7 17 17 7"></path>
+            </svg>
+            <div class="btn-group">
+              <button class="card-action-btn" data-open-case-study="imcleague">
+                Case Study
+              </button>
+              <a href="https://github.com/prajwalprajwalferrao-cloud/imc-league-s4" target="_blank" rel="noopener noreferrer" class="card-action-btn" aria-label="View IMC League source on GitHub">
+                Code
+              </a>
+              <a href="https://imc-league-s4-lake.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-action-btn card-action-primary" aria-label="Open IMC League live project">
+                Live Demo ↗
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 04: GreenMeter Pro (Rank #4 - In Development) -->
+        <article class="project-card" data-category="iot web">
+          <div class="project-glow" style="background: radial-gradient(circle at top right, var(--cyan-glow) 0%, transparent 60%);" aria-hidden="true"></div>
+          <div class="project-number">04</div>
+          <div class="project-content">
+            <div class="project-header-row">
+              <p class="project-type">IoT Telemetry · Automotive Diagnostics · Mobile</p>
+              <span class="project-status-wip">In Development (Phase 2 Prototype)</span>
+            </div>
+            <h3>GreenMeter Pro — Real-Time Vehicle Emission Diagnostics</h3>
+            <p class="project-problem-line">
+              <strong>Problem:</strong> Static annual vehicle pollution checks miss active engine component failures that emit excessive pollutants in real driving conditions.
+            </p>
+            <p class="project-problem-line">
+              <strong>Solution:</strong> A hybrid telemetry architecture linking petrol OBD-II diagnostics with a custom ESP32 diesel gas sensor array to stream live exhaust telemetry to a cross-platform Flutter app.
+            </p>
+            <div class="project-metric-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+              <span>Dual sensing pipeline · Survey paper published on IoT emission governance</span>
+            </div>
+            <ul class="tech-tags-list" aria-label="GreenMeter Pro technologies">
+              <li>Flutter</li>
+              <li>ESP32</li>
+              <li>OBD-II CAN Bus</li>
+              <li>Firebase</li>
+              <li>Node.js</li>
+              <li>C++</li>
+            </ul>
+          </div>
+          <div class="project-card-actions">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-arrow" aria-hidden="true">
+              <path d="M7 7h10v10"></path><path d="M7 17 17 7"></path>
+            </svg>
+            <div class="btn-group">
+              <button class="card-action-btn" data-open-case-study="greenmeter">
+                Case Study
+              </button>
+              <a href="#contact" class="card-action-btn card-action-primary">
+                Inquire
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 05: House Price Prediction (Rank #5) -->
+        <article class="project-card" data-category="ai web">
+          <div class="project-glow" style="background: radial-gradient(circle at top right, var(--emerald-glow) 0%, transparent 60%);" aria-hidden="true"></div>
+          <div class="project-number">05</div>
+          <div class="project-content">
+            <div class="project-header-row">
+              <p class="project-type" style="color: var(--emerald);">Machine Learning · Predictive Analytics</p>
+              <span class="project-live-badge project-live-badge-emerald">Live Deployed</span>
+            </div>
+            <h3>House Price Prediction &amp; Market Valuation</h3>
+            <p class="project-problem-line">
+              <strong>Problem:</strong> Property buyers often encounter speculative pricing without baseline statistical valuation metrics.
+            </p>
+            <p class="project-problem-line">
+              <strong>Solution:</strong> An interactive machine learning regression application that benchmarks 4 algorithms (Linear Regression, Decision Tree, Random Forest, XGBoost) and provides instant valuation sliders.
+            </p>
+            <div class="project-metric-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+              <span>0.89 R² predictive accuracy · Interactive real-time parameter tuning</span>
+            </div>
+            <ul class="tech-tags-list" aria-label="House Price technologies">
+              <li>Python</li>
+              <li>XGBoost</li>
+              <li>Scikit-learn</li>
+              <li>Pandas</li>
+              <li>Streamlit</li>
+            </ul>
+          </div>
+          <div class="project-card-actions">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-arrow" aria-hidden="true">
+              <path d="M7 7h10v10"></path><path d="M7 17 17 7"></path>
+            </svg>
+            <div class="btn-group">
+              <button class="card-action-btn" data-open-case-study="houseprice">
+                Case Study
+              </button>
+              <a href="https://housepriceprediction-sofkbghj7kkbmkyqtuq63p.streamlit.app/" target="_blank" rel="noopener noreferrer" class="card-action-btn card-action-primary" aria-label="Open House Price Prediction live project">
+                Live Demo ↗
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills Matrix (Grouped Cards) -->
+    <section class="section" id="skills">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Technical Capability</p>
+          <h2>Skills grouped by<br />domain &amp; execution.</h2>
+        </div>
+        <p>A focused engineering toolkit honed across real-world full-stack architectures, computer-vision models, and cloud services.</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Card 1: Languages -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            <h3>Programming Languages</h3>
+          </div>
+          <ul class="skill-pill-list">
+            <li class="skill-pill">Python</li>
+            <li class="skill-pill">JavaScript (ES6+)</li>
+            <li class="skill-pill">TypeScript</li>
+            <li class="skill-pill">C / C++</li>
+            <li class="skill-pill">SQL</li>
+            <li class="skill-pill">HTML5 &amp; Modern CSS</li>
+          </ul>
+        </div>
+
+        <!-- Card 2: AI & ML -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle></svg>
+            <h3>AI &amp; Computer Vision</h3>
+          </div>
+          <ul class="skill-pill-list">
+            <li class="skill-pill">OpenCV</li>
+            <li class="skill-pill">MediaPipe Pose &amp; Face</li>
+            <li class="skill-pill">XGBoost</li>
+            <li class="skill-pill">Scikit-learn</li>
+            <li class="skill-pill">Pandas &amp; NumPy</li>
+            <li class="skill-pill">Model Optimization</li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Web Frameworks -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path></svg>
+            <h3>Full-Stack Frameworks</h3>
+          </div>
+          <ul class="skill-pill-list">
+            <li class="skill-pill">React</li>
+            <li class="skill-pill">Next.js</li>
+            <li class="skill-pill">Vite</li>
+            <li class="skill-pill">Node.js &amp; Express</li>
+            <li class="skill-pill">Flask</li>
+            <li class="skill-pill">Tailwind CSS</li>
+          </ul>
+        </div>
+
+        <!-- Card 4: Databases & Cloud -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            <h3>Databases &amp; Cloud</h3>
+          </div>
+          <ul class="skill-pill-list">
+            <li class="skill-pill">Supabase (PostgreSQL)</li>
+            <li class="skill-pill">MongoDB Atlas</li>
+            <li class="skill-pill">Firebase</li>
+            <li class="skill-pill">Vercel</li>
+            <li class="skill-pill">RESTful API Design</li>
+            <li class="skill-pill">JWT &amp; OAuth</li>
+          </ul>
+        </div>
+
+        <!-- Card 5: Hardware & Tools -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="8" y="8" width="8" height="8" rx="1"></rect><path d="M12 20v2"></path><path d="M12 2v2"></path></svg>
+            <h3>Hardware &amp; Tooling</h3>
+          </div>
+          <ul class="skill-pill-list">
+            <li class="skill-pill">ESP32 &amp; Sensor Arrays</li>
+            <li class="skill-pill">OBD-II CAN Diagnostics</li>
+            <li class="skill-pill">Git &amp; GitHub Actions</li>
+            <li class="skill-pill">Docker Containers</li>
+            <li class="skill-pill">Postman API Testing</li>
+            <li class="skill-pill">Flutter Cross-Platform</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Proof Timeline -->
+    <section class="section" id="experience">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Milestones &amp; Trajectory</p>
+          <h2>Experience, education<br />and track record.</h2>
+        </div>
+        <p>A progression of academic rigor, hands-on software development, and real-world system deployments.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Milestone 1: Final Year B.Tech -->
+        <div class="timeline-item">
+          <div class="timeline-node" aria-hidden="true"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3 class="timeline-title">B.Tech in Artificial Intelligence &amp; Machine Learning</h3>
+              <span class="timeline-date">2022 – 2026</span>
+            </div>
+            <div class="timeline-subtitle">NMAM Institute of Technology · Nitte, Karnataka</div>
+            <p class="timeline-desc">
+              Final-year undergraduate coursework focused on Advanced Machine Learning, Computer Vision algorithms, Deep Learning, Natural Language Processing, and Distributed Systems. Maintaining strong academic standing with project leadership.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 2: Vehicle Emission Research -->
+        <div class="timeline-item">
+          <div class="timeline-node" aria-hidden="true"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3 class="timeline-title">Lead Researcher &amp; Systems Architect — GreenMeter Pro</h3>
+              <span class="timeline-date">2025 – 2026</span>
+            </div>
+            <div class="timeline-subtitle">IoT Automotive Diagnostic Research Project</div>
+            <p class="timeline-desc">
+              Authored a comprehensive survey conference paper on real-time vehicle emissions diagnostics via OBD-II CAN bus and ESP32 telemetry. Architected hardware sensing benchmarks and mobile integration specs.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 3: Software Engineering Internship [PLACEHOLDER] -->
+        <div class="timeline-item">
+          <div class="timeline-node" aria-hidden="true"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3 class="timeline-title">Software Engineering Intern</h3>
+              <span class="timeline-date">[PLACEHOLDER: Jun 2025 – Aug 2025]</span>
+            </div>
+            <div class="timeline-subtitle">[PLACEHOLDER: Tech Solutions Pvt. Ltd.]</div>
+            <p class="timeline-desc">
+              [PLACEHOLDER: Developed internal microservices, contributed to React dashboard components, and built automated test coverage that improved release velocity by 25%.]
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 4: Hackathons & Community -->
+        <div class="timeline-item">
+          <div class="timeline-node" aria-hidden="true"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3 class="timeline-title">Tournament Platform Architect &amp; Hackathon Participant</h3>
+              <span class="timeline-date">2024 – 2025</span>
+            </div>
+            <div class="timeline-subtitle">IMC League Management &amp; Collegiate Competitions</div>
+            <p class="timeline-desc">
+              Architected and deployed full-stack tournament infrastructure supporting 100+ competitors with zero downtime. Participated in multiple campus hackathons focused on civic tech and healthcare safety.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials / Social Proof Section -->
+    <section class="section" id="testimonials">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Collaborator Endorsements</p>
+          <h2>What people say<br />about working with me.</h2>
+        </div>
+        <p>Feedback from teammates, faculty mentors, and project stakeholders.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            &ldquo;[PLACEHOLDER: Prajwal delivered our tournament platform ahead of schedule. The real-time scoring and auction features transformed an event that used to take days of manual spreadsheet work into a seamless digital experience.]&rdquo;
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SC</div>
+            <div class="author-info">
+              <strong>[PLACEHOLDER: Sports Committee Head]</strong>
+              <small>IMC League Tournament Operations</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            &ldquo;[PLACEHOLDER: Prajwal demonstrates a rare combination of deep mathematical understanding of AI algorithms and practical, pragmatic full-stack engineering skills. His fall detection project is clean, robust, and well-thought-out.]&rdquo;
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AP</div>
+            <div class="author-info">
+              <strong>[PLACEHOLDER: Faculty Project Advisor]</strong>
+              <small>Department of AI &amp; ML, NMAMIT</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            &ldquo;[PLACEHOLDER: Outstanding pair-programming teammate. Prajwal takes ownership of difficult architectural bottlenecks, writes clean code, and is relentless until the system works reliably in production.]&rdquo;
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">TP</div>
+            <div class="author-info">
+              <strong>[PLACEHOLDER: Senior Project Partner]</strong>
+              <small>Final Year Engineering Capstone</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services-section" id="services">
+      <div class="section-heading compact">
+        <div>
+          <p class="eyebrow">What I can build for you</p>
+          <h2>Services for ideas<br />that need to ship.</h2>
+        </div>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
+          </div>
+          <span>01</span>
+          <h3>Websites that perform</h3>
+          <p>Modern, responsive, accessible web applications built around business objectives with 95+ Lighthouse scores.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path></svg>
+          </div>
+          <span>02</span>
+          <h3>Custom Web Platforms &amp; Dashboards</h3>
+          <p>Admin dashboards, real-time sports league systems, and registration portals integrated with persistent cloud databases.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M12 13h4"></path></svg>
+          </div>
+          <span>03</span>
+          <h3>AI &amp; Computer Vision Prototypes</h3>
+          <p>Computer-vision models (OpenCV, MediaPipe) and predictive pipelines that automate manual verification and diagnostics.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+      <div class="about-intro">
+        <p class="eyebrow">About Me</p>
+        <h2>Curious by nature.<br />Practical by choice.</h2>
+      </div>
+
+      <div class="about-copy">
+        <p class="large-copy">
+          I&#x27;m pursuing a B.Tech in Artificial Intelligence &amp; Machine Learning at NMAM Institute of Technology, Nitte.
+        </p>
+        <p>
+          My engineering work sits at the intersection of software, machine learning, and physical sensors. I enjoy taking an idea from a whiteboard requirement to an active deployed product—structuring the workflow, designing the frontend, securing data pipelines, and continuously iterating through user feedback.
+        </p>
+        <div class="location">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+            <circle cx="12" cy="10" r="3"></circle>
           </svg>
+          Mangaluru, Karnataka, India
         </div>
-        <span>01</span>
-        <h3>Websites that work</h3>
-        <p>Responsive portfolio, business and event websites built around a clear purpose—not a generic template.</p>
-      </article>
+      </div>
+    </section>
 
-      <article class="service-card">
-        <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers" aria-hidden="true">
-            <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path>
-            <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path>
-            <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path>
-          </svg>
+    <!-- Interactive Contact Section with Form -->
+    <section class="section contact-section" id="contact">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Get In Touch</p>
+          <h2>Let&#x27;s build something<br /><span style="color: var(--cyan);">impactful.</span></h2>
         </div>
-        <span>02</span>
-        <h3>Custom web systems</h3>
-        <p>Admin dashboards, sports-league platforms, registration tools and practical workflows with cloud data.</p>
-      </article>
+        <p>
+          Whether you have an open engineering role, a freelance project, or want to collaborate on an AI or IoT prototype, my inbox is open.
+        </p>
+      </div>
 
-      <article class="service-card">
-        <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit" aria-hidden="true">
-            <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path>
-            <path d="M9 13a4.5 4.5 0 0 0 3-4"></path>
-            <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path>
-            <path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path>
-            <path d="M6 18a4 4 0 0 1-1.967-.516"></path>
-            <path d="M12 13h4"></path>
-            <path d="M12 18h6a2 2 0 0 1 2 2v1"></path>
-            <path d="M12 8h8"></path>
-            <path d="M16 8V5a2 2 0 0 1 2-2"></path>
-            <circle cx="16" cy="13" r=".5"></circle>
-            <circle cx="18" cy="3" r=".5"></circle>
-            <circle cx="20" cy="21" r=".5"></circle>
-            <circle cx="20" cy="8" r=".5"></circle>
-          </svg>
+      <div class="contact-layout">
+        <!-- Direct Contact Links with Scraper Protection -->
+        <div class="contact-info">
+          <h3>Direct Channels</h3>
+          <p style="color: var(--text-secondary); font-size: var(--font-sm);">
+            Click any channel below or use the form to send me a direct note:
+          </p>
+
+          <div class="contact-button-grid">
+            <!-- Obfuscated Email Link -->
+            <a class="contact-link-card obfuscated-email" href="#" aria-label="Send email to Prajwal Ferrao">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+              <div>
+                <strong>Email</strong>
+                <small class="obfuscated-email" data-show-text="true">Click to reveal &amp; mail</small>
+              </div>
+            </a>
+
+            <!-- LinkedIn Link -->
+            <a class="contact-link-card" href="https://www.linkedin.com/in/prajwal-ferrao-6b8443181" target="_blank" rel="noopener noreferrer" aria-label="Connect with Prajwal on LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              <div>
+                <strong>LinkedIn</strong>
+                <small>linkedin.com/in/prajwal-ferrao-6b8443181</small>
+              </div>
+            </a>
+
+            <!-- Obfuscated WhatsApp Link -->
+            <a class="contact-link-card obfuscated-whatsapp" href="#" target="_blank" rel="noopener noreferrer" aria-label="Message Prajwal on WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+              <div>
+                <strong>WhatsApp</strong>
+                <small>+91 99008 10588</small>
+              </div>
+            </a>
+
+            <!-- GitHub Profile Link -->
+            <a class="contact-link-card" href="https://github.com/prajwalprajwalferrao-cloud" target="_blank" rel="noopener noreferrer" aria-label="Visit Prajwal's GitHub Profile">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6a9 9 0 0 0-9 9V3"></path><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle></svg>
+              <div>
+                <strong>GitHub</strong>
+                <small>@prajwalprajwalferrao-cloud</small>
+              </div>
+            </a>
+          </div>
         </div>
-        <span>03</span>
-        <h3>AI &amp; automation</h3>
-        <p>Python, computer-vision and machine-learning prototypes that turn manual tasks into usable tools.</p>
-      </article>
-    </div>
-  </section>
 
-  <section class="section about-section" id="about">
-    <div class="about-intro">
-      <p class="eyebrow">About me</p>
-      <h2>Curious by nature.<br/>Practical by choice.</h2>
-    </div>
-    <div class="about-copy">
-      <p class="large-copy">I&#x27;m pursuing a B.Tech in Artificial Intelligence &amp; Machine Learning at NMAM Institute of Technology, Nitte.</p>
-      <p>My work sits where software, data and real-world operations meet. I enjoy taking an idea from a rough requirement to a usable product—planning the workflow, building the interface, connecting the data and improving it through feedback.</p>
-      <div class="location">
-        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin" aria-hidden="true">
-          <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
-          <circle cx="12" cy="10" r="3"></circle>
-        </svg> 
-        Mangaluru, Karnataka, India
-      </div>
-    </div>
-    <div class="skills-panel">
-      <div class="skills-title">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu" aria-hidden="true">
-          <path d="M12 20v2"></path>
-          <path d="M12 2v2"></path>
-          <path d="M17 20v2"></path>
-          <path d="M17 2v2"></path>
-          <path d="M2 12h2"></path>
-          <path d="M2 17h2"></path>
-          <path d="M2 7h2"></path>
-          <path d="M20 12h2"></path>
-          <path d="M20 17h2"></path>
-          <path d="M20 7h2"></path>
-          <path d="M7 20v2"></path>
-          <path d="M7 2v2"></path>
-          <rect x="4" y="4" width="16" height="16" rx="2"></rect>
-          <rect x="8" y="8" width="8" height="8" rx="1"></rect>
-        </svg>
-        <h3>Tools I work with</h3>
-      </div>
-      <ul>
-        <li>Python</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Next.js</li>
-        <li>Node.js</li>
-        <li>Flask</li>
-        <li>Flutter</li>
-        <li>OpenCV</li>
-        <li>Machine Learning</li>
-        <li>Supabase</li>
-        <li>Firebase</li>
-        <li>MongoDB</li>
-        <li>REST APIs</li>
-        <li>Git &amp; GitHub</li>
-      </ul>
-    </div>
-    <div class="education-card">
-      <span class="education-label">Education</span>
-      <div>
-        <h3>B.Tech — Artificial Intelligence &amp; Machine Learning</h3>
-        <p>NMAM Institute of Technology · Nitte</p>
-      </div>
-      <span class="education-status">Final year</span>
-    </div>
-  </section>
+        <!-- Working Contact Form -->
+        <div class="contact-form-card">
+          <form id="portfolio-contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" novalidate>
+            <div class="form-group">
+              <label for="form-name">Your Name</label>
+              <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Alex Morgan" required />
+            </div>
 
-  <section class="contact-section" id="contact">
-    <p class="eyebrow">Have a project in mind?</p>
-    <h2>Let&#x27;s make it<br/><span>work.</span></h2>
-    <p>Available for freelance websites, dashboards, automation and early-stage product prototypes.</p>
-    <div class="contact-actions" aria-label="Contact Prajwal Ferrao">
-      <a class="contact-button" href="mailto:prajwalprajwalferrao@gmail.com?subject=Project%20enquiry%20from%20your%20portfolio">
-        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail" aria-hidden="true">
-          <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
-          <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-        </svg> 
-        Email me
-      </a>
-      <a class="contact-button contact-secondary" href="https://www.linkedin.com/in/prajwal-ferrao-6b8443181" target="_blank" rel="noreferrer">
-        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase-business" aria-hidden="true">
-          <path d="M12 12h.01"></path>
-          <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
-          <path d="M22 13a18.15 18.15 0 0 1-20 0"></path>
-          <rect width="20" height="14" x="2" y="6" rx="2"></rect>
-        </svg> 
-        Connect on LinkedIn
-      </a>
-      <a class="contact-button contact-whatsapp" href="https://wa.me/919900810588?text=Hi%20Prajwal%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noreferrer">
-        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle" aria-hidden="true">
-          <path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path>
-        </svg> 
-        Message on WhatsApp
-      </a>
-    </div>
-  </section>
+            <div class="form-group">
+              <label for="form-email">Your Email</label>
+              <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. alex@company.com" required />
+            </div>
 
+            <div class="form-group">
+              <label for="form-subject">Subject</label>
+              <input type="text" id="form-subject" name="subject" class="form-input" placeholder="e.g. Software Engineering Role / Project Inquiry" required />
+            </div>
+
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" name="message" class="form-textarea" placeholder="Describe your project, team, or opportunity..." required></textarea>
+            </div>
+
+            <button type="submit" class="primary-button" style="width: 100%; justify-content: center;">
+              Send Message
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+
+            <div id="form-status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Deep-Dive Case Study Accessible Dialog -->
+  <dialog id="case-study-modal" aria-labelledby="modal-case-title">
+    <button id="modal-close-btn" class="modal-close-btn" aria-label="Close case study dialog">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <div id="modal-body-content">
+      <!-- Injected dynamically via script.js -->
+    </div>
+  </dialog>
+
+  <!-- Footer -->
   <footer>
-    <a class="brand" href="#top" aria-label="Prajwal Ferrao, replay portrait animation">
-      <span>PF</span>
+    <a class="brand" href="#top" aria-label="Prajwal Ferrao">
+      <span class="brand-badge">PF</span>
       <span class="brand-name">Prajwal Ferrao</span>
     </a>
-    <p>AI &amp; ML Engineer · Full-stack Developer</p>
-    <p>© 2026 Prajwal Ferrao</p>
+    <p>AI &amp; ML Engineer · Full-Stack Web Developer</p>
+    <p>© 2026 Prajwal Ferrao. Built for performance and precision.</p>
   </footer>
-</main>
+
+  <!-- Modular Vanilla JS -->
+  <script type="module" src="./script.js"></script>
 </body>
 </html>
