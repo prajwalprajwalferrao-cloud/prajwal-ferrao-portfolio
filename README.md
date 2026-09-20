@@ -1,6 +1,7 @@
 # 🚀 Prajwal Ferrao — Portfolio
 
 <p align="center">
+  <img src="prajwal-folded-arms.png" alt="Prajwal Ferrao" width="200" style="border-radius: 50%;" /><br><br>
   <strong>AI &amp; ML Engineer · Full-Stack Developer · IoT Prototyper</strong><br>
   <em>Turning real problems into reliable websites, intelligent applications, and connected prototypes.</em>
 </p>
