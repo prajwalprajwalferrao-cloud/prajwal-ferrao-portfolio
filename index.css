@@ -560,82 +560,175 @@ nav a.nav-active {
   letter-spacing: 0.04em;
 }
 
-/* Portrait Presentation Stage */
+/* Portrait Presentation Stage matching custom mockup */
 .portrait-stage {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: var(--space-4);
 }
 
 .portrait-glow {
   position: absolute;
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 242, 254, 0.25), rgba(16, 185, 129, 0.15) 60%, transparent 80%);
-  filter: blur(50px);
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.35) 0%, rgba(2, 132, 199, 0.15) 50%, transparent 75%);
+  filter: blur(55px);
   z-index: 0;
+  pointer-events: none;
 }
 
 .portrait-card {
   position: relative;
   z-index: 1;
-  border-radius: var(--radius-lg);
-  padding: var(--space-3);
-  background: var(--gradient-surface);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-lg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  border-radius: 28px;
+  padding: 0;
+  background: radial-gradient(circle at 50% 36%, rgba(14, 165, 233, 0.42) 0%, rgba(2, 132, 199, 0.2) 40%, rgba(9, 13, 22, 0.96) 72%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.65), 0 0 50px rgba(2, 132, 199, 0.22);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+[data-theme="light"] .portrait-card {
+  background: radial-gradient(circle at 50% 36%, rgba(14, 165, 233, 0.25) 0%, rgba(240, 249, 255, 0.9) 55%, #ffffff 85%);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12), 0 0 35px rgba(2, 132, 199, 0.15);
+}
+
+.portrait-card:hover {
+  box-shadow: 0 30px 75px rgba(0, 0, 0, 0.75), 0 0 65px rgba(2, 132, 199, 0.32);
+}
+
+/* Portrait Image Wrapper */
+.portrait-img-wrap {
+  border-radius: 27px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .hero-portrait {
   width: 100%;
-  max-width: 420px;
+  max-width: 440px;
   height: auto;
-  border-radius: calc(var(--radius-lg) - 6px);
   display: block;
   object-fit: cover;
-  filter: contrast(1.04) brightness(0.98);
+  filter: contrast(1.03) brightness(1);
 }
 
-.portrait-badge {
+/* Top-Right "Open to Opportunities" Pill Button */
+.portrait-opportunities-pill {
   position: absolute;
-  bottom: var(--space-6);
-  right: -10px;
+  top: 24px;
+  right: 24px;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.52rem 1.35rem;
+  border-radius: 9999px;
+  border: 1.5px solid #38bdf8;
+  background: rgba(8, 14, 26, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #38bdf8;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  transition: all 0.22s var(--ease-spring);
+}
+
+[data-theme="light"] .portrait-opportunities-pill {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: #0284c7;
+  color: #0284c7;
+}
+
+.portrait-opportunities-pill:hover {
+  background: rgba(56, 189, 248, 0.18);
+  border-color: #00f2fe;
+  color: #00f2fe;
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px rgba(56, 189, 248, 0.5);
+}
+
+[data-theme="light"] .portrait-opportunities-pill:hover {
+  background: rgba(2, 132, 199, 0.1);
+  border-color: #0369a1;
+  color: #0369a1;
+}
+
+/* Bottom-Left Floating Identity Badge Card */
+.portrait-identity-card {
+  position: absolute;
+  bottom: -22px;
+  left: -22px;
+  z-index: 10;
   display: flex;
   align-items: center;
-  gap: var(--space-3);
-  padding: 0.65rem 1.1rem;
-  border-radius: var(--radius-md);
-  background: rgba(13, 18, 29, 0.88);
-  border: 1px solid var(--border);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: var(--shadow-md);
+  gap: 14px;
+  padding: 14px 24px;
+  border-radius: 18px;
+  background: rgba(11, 16, 29, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.55), 0 0 22px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s var(--ease-spring);
 }
 
-[data-theme="light"] .portrait-badge {
+[data-theme="light"] .portrait-identity-card {
   background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.12);
 }
 
-.badge-icon {
-  font-size: 1.3rem;
+.portrait-identity-card:hover {
+  transform: translateY(-3px) scale(1.02);
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.65), 0 0 25px rgba(56, 189, 248, 0.2);
 }
 
-.badge-title {
-  display: block;
-  font-size: var(--font-xs);
+.identity-sparkle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fbbf24;
+  filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.65));
+}
+
+.identity-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.identity-name {
+  font-size: 1.05rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #ffffff;
+  letter-spacing: -0.01em;
 }
 
-.badge-sub {
-  display: block;
-  font-size: 0.7rem;
-  color: var(--cyan);
-  font-weight: 600;
+[data-theme="light"] .identity-name {
+  color: #0f172a;
+}
+
+.identity-role {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+[data-theme="light"] .identity-role {
+  color: #64748b;
 }
 
 /* ==========================================================================
@@ -2018,6 +2111,37 @@ footer {
 
   .channels-grid {
     grid-template-columns: 1fr;
+  }
+
+  .portrait-card {
+    border-radius: 22px;
+  }
+
+  .portrait-img-wrap {
+    border-radius: 21px;
+  }
+
+  .portrait-identity-card {
+    left: 4px;
+    bottom: -16px;
+    padding: 10px 16px;
+    gap: 10px;
+    border-radius: 14px;
+  }
+
+  .identity-name {
+    font-size: 0.92rem;
+  }
+
+  .identity-role {
+    font-size: 0.72rem;
+  }
+
+  .portrait-opportunities-pill {
+    top: 14px;
+    right: 14px;
+    padding: 0.42rem 1.05rem;
+    font-size: 0.78rem;
   }
 }
 
