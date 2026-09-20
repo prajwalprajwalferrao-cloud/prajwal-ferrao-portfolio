@@ -75,3 +75,25 @@ a.project-card-clickable:hover .project-live-badge-rose {
   background: rgba(251, 113, 133, 0.24);
   border-color: rgba(251, 113, 133, 0.7);
 }
+
+/* Emerald theme for Card 05 (House Price Prediction) */
+a.project-card-emerald:hover {
+  background-color: rgba(52, 211, 153, 0.025);
+  border-bottom-color: rgba(52, 211, 153, 0.3);
+}
+
+a.project-card-emerald:hover .project-arrow {
+  color: #34d399;
+}
+
+.project-live-badge-emerald {
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.4);
+}
+
+.project-card:hover .project-live-badge-emerald,
+a.project-card-clickable:hover .project-live-badge-emerald {
+  background: rgba(52, 211, 153, 0.24);
+  border-color: rgba(52, 211, 153, 0.7);
+}
