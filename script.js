@@ -71,7 +71,7 @@ const caseStudies = {
     liveUrl: "https://housepriceprediction-sofkbghj7kkbmkyqtuq63p.streamlit.app/",
     codeUrl: "https://github.com/prajwalprajwalferrao-cloud",
     metric: "0.89 R² score · 4 ML models benchmarked and interactive sliders",
-    tags: ["Python", "XGBoost", "Scikit-learn", "Pandas", "Streamlit", "NumPy"],
+    tags: ["Python", "XGBoost", "CatBoost", "Scikit-learn", "Pandas", "Streamlit", "NumPy"],
     problem: "Real estate valuation is often opaque and biased, making it difficult for homebuyers and investors to evaluate whether property listing prices reflect actual market fundamentals.",
     solution: "Developed an interactive machine learning regression application that benchmarks multiple predictive models (Linear Regression, Decision Trees, Random Forest, and XGBoost) to produce accurate, feature-weighted property valuations with real-time UI sliders.",
     architecture: [
